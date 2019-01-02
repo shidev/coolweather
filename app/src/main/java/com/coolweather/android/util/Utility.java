@@ -5,6 +5,9 @@ import android.text.TextUtils;
 import com.coolweather.android.db.City;
 import com.coolweather.android.db.County;
 import com.coolweather.android.db.Province;
+import com.coolweather.android.gson.Airnowcity;
+import com.coolweather.android.gson.Daliy;
+import com.coolweather.android.gson.Life;
 import com.coolweather.android.gson.Weather;
 import com.google.gson.Gson;
 
@@ -76,6 +79,39 @@ public class Utility {
             String weatherContent=jsonArray.getJSONObject(0).toString();
             return new Gson().fromJson(weatherContent,Weather.class);
         }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public static Daliy handleDaliyResponse(String response){
+        try{
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather6");
+            String daliyContent=jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(daliyContent,Daliy.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public static Airnowcity handleAirnowcityResponse(String response){
+        try{
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather6");
+            String airnowcityContent=jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(airnowcityContent,Airnowcity.class);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public static Life handleLifeResponse(String response){
+        try{
+            JSONObject jsonObject=new JSONObject(response);
+            JSONArray jsonArray=jsonObject.getJSONArray("HeWeather6");
+            String lifeContent=jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(lifeContent,Life.class);
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         return null;

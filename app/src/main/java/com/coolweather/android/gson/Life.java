@@ -2,12 +2,10 @@ package com.coolweather.android.gson;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Life {
-    @SerializedName("brf")
-    public String brife;
-
-    @SerializedName("txt")
-    public String text;
-
-    public String type;
+    public String status;
+    @SerializedName("lifestyle")
+    public List<Lifestyle> lifeList;
 }

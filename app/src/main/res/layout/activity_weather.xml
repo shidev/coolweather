@@ -42,7 +42,7 @@
 
                     <include layout="@layout/aqi" />
 
-                    <include layout="@layout/lifestyle" />
+                    <include layout="@layout/lifetotal" />
 
                 </LinearLayout>
 
