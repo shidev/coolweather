@@ -14,7 +14,7 @@
         android:layout_marginTop="15dp"
         android:id="@+id/airquality_text"
         android:textColor="#fff"
-        android:textSize="22sp"/>
+        android:textSize="20sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

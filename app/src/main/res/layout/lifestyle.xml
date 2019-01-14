@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:textSize="19dp"
-        android:textColor="#fcc" />
+        android:textColor="#a8cff0" />
 
     <TextView
         android:id="@+id/brife_text"
